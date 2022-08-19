@@ -1,0 +1,38 @@
+create database efmurillo;
+use efmurillo;
+CREATE TABLE cliente (
+    idCliente int,
+    nombreCliente varchar(30),
+    apellidoCliente varchar(50),
+    nroCelular varchar(9),
+    direccion varchar(50),
+    PRIMARY KEY (idCliente)
+);
+
+CREATE TABLE pizzeria (
+    idPizzeria int,
+    direccion varchar(30),
+    sede varchar(50),
+    PRIMARY KEY (idPizzeria)
+);
+
+CREATE TABLE pizza	 (
+    idPizza int,
+    nombrePizza varchar(30),
+    descripcion varchar(50),
+    PRIMARY KEY (idPizza)
+);
+
+CREATE TABLE cliente_pizza_detalle (
+    idCliente int,
+    idPizza int
+);
+
+CREATE TABLE pizzeria_pizza_detalle (
+    idPizzeria int,
+    idPizza int
+);
+
+
+insert into cliente
+values(1,milagros,murillo,936525478, Av.Alcanfores);
